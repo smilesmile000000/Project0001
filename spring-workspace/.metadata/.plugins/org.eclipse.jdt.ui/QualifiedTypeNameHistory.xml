@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.kh.spring.model.vo.lgTV"/>
+<fullyQualifiedTypeName name="org.kh.spring.model.vo.SamsungTV"/>
+<fullyQualifiedTypeName name="org.apache.naming.factory.BeanFactory"/>
+<fullyQualifiedTypeName name="org.kh.spring.model.vo.BeanFactory"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+<fullyQualifiedTypeName name="org.kh.person.model.vo.PersonMgr"/>
+<fullyQualifiedTypeName name="org.kh.spring.model.vo.TVmgr"/>
+<fullyQualifiedTypeName name="org.kh.spring.model.vo.TV"/>
+<fullyQualifiedTypeName name="org.kh.person.model.vo.Person"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.kh.bean.test.TestData"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

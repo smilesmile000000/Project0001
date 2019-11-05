@@ -1,0 +1,7 @@
+package org.kh.bean.test;
+
+import java.util.Map;
+
+public class CollectionMapBean {
+	private Map<String, String> addressList;
+}

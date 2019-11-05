@@ -1,0 +1,10 @@
+package org.kh.test.ano;
+
+public class CandyCruchSaga {
+
+	public CandyCruchSaga() {
+		super();
+		System.out.println("KING");
+	}
+	
+}
