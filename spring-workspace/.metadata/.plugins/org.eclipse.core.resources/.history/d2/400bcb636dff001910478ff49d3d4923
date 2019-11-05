@@ -1,0 +1,16 @@
+package org.kh.spring.model.vo;
+
+public class LgTV implements TV {
+	public void powerOn() {
+		System.out.println("LgTV ---- 전원 켜짐");
+	}
+	public void powerOff() {
+		System.out.println("LgTV ---- 전원 꺼짐");
+	}
+	public void volumeUp() {
+		System.out.println("LgTV ---- 소리를 올림");
+	}
+	public void volumeDown() {
+		System.out.println("LgTV ---- 소리를 내림");
+	}
+}

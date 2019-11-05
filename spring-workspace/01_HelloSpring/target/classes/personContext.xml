@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- setter를 이용한 Person객체 생성 -->
+	<bean id="ps1" class="org.kh.person.model.vo.Person">
+		<property name="name" value="이름1"></property>
+		<property name="age">
+			<value>20</value>
+		</property>
+		<property name="addr" value="서울시"></property>
+	</bean>
+	<!-- 생성자를 이용한 Person객체 생성 -->
+	<bean id="ps2" class="org.kh.person.model.vo.Person">
+		<constructor-arg value="이름2"/>
+		<constructor-arg>
+			<value>30</value>
+		</constructor-arg>
+		<constructor-arg value="경기도"/>
+	</bean>
+	<!-- PersonMgr 객체 생성 -->
+	<bean id="pm" class="org.kh.person.model.vo.PersonMgr">
+		<!--  생성자 방식 -->
+		<constructor-arg ref="ps1"/>
+		<!--  Setter방식 -->
+		<!-- <property name="person" ref="ps2"/> -->
+	</bean>
+</beans>

@@ -1,0 +1,5 @@
+package org.kh.spring.model.vo;
+
+public class BeanFactory {
+	
+}
