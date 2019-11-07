@@ -2,11 +2,15 @@ package org.kh.board.controller;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.kh.board.model.service.BoardService;
 import org.kh.board.model.vo.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ExtendedModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -41,6 +45,33 @@ public class BoardController {
 			return "board/insertSuccess";
 		} else {
 			return "board/insertFailed";
+		}
+	}
+	
+	@RequestMapping(value="/boardUpdatePage.do")
+	public ModelAndView boardUpdatePage(int boardNo) {
+		Board b = boardService.boardUpdatePage(boardNo);
+		ModelAndView mav = new ModelAndView();
+		
+		if(b != null) {
+			mav.addObject("board", b);
+			mav.setViewName("board/boardUpdatePage");
+		} else {
+			mav.setViewName("board/updateError");
+		}
+		
+		return mav;
+	}
+
+	
+	@RequestMapping(value="/boardUpdate.do")
+	public String boardUpdate(HttpSession session, Board b) {
+		int result = boardService.boardUpdate(b);
+		if(result > 0) {
+			session.setAttribute("board", b);
+			return "board/updateSuccess";
+		} else {
+			return "board/updateFailed";
 		}
 	}
 }

@@ -25,4 +25,19 @@ public class BoardService {
 		return result;
 	}
 
+	public int boardUpdate(Board b) {
+		int result = boardDao.boardUpdate(b);
+		return result;
+	}
+
+	public Board boardUpdatePage(int boardNo) {
+		List list = boardDao.boardUpdatePage(boardNo);
+		Board board = null;
+		
+		if(!list.isEmpty()) {
+			board = (Board)list.get(0);
+		}
+		return board;
+	}
+
 }

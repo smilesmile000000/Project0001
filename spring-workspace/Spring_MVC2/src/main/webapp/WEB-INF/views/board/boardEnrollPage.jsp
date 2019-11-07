@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>게시판 글쓰기</h1>
+	<h1><a href="/" >게시판 글쓰기</a></h1>
 	<hr>
 	<form action="/boardEnroll.do" method="post">
 		제목 : <input type="text" name="boardTitle"><br>
-		작성자 : <input name="boardAuthor" value="${sessionScope.member.memberId }" readonly><br>
+		작성자 : <input type="text" name="boardAuthor" value="${sessionScope.member.memberName }" readonly><br>
 		내용 : <input type="text" name="boardContent"><br>
 		<input type="submit" value="작성"><br>
 	</form>
