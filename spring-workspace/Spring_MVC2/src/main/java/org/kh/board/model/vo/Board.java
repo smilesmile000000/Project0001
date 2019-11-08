@@ -8,17 +8,21 @@ public class Board {
 	private String BoardAuthor;
 	private String BoardContent;
 	private Date BoardEnrollDate;
+	private String Filename;
+	private String Filepath;
 	public Board() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Board(int boardNo, String boardTitle, String boardAuthor, String boardContent, Date boardEnrollDate) {
+	public Board(int boardNo, String boardTitle, String boardAuthor, String boardContent, Date boardEnrollDate, String filename, String filepath) {
 		super();
 		BoardNo = boardNo;
 		BoardTitle = boardTitle;
 		BoardAuthor = boardAuthor;
 		BoardContent = boardContent;
 		BoardEnrollDate = boardEnrollDate;
+		Filename = filename;
+		Filepath = filepath;
 	}
 	public int getBoardNo() {
 		return BoardNo;
@@ -49,6 +53,18 @@ public class Board {
 	}
 	public void setBoardEnrollDate(Date boardEnrollDate) {
 		BoardEnrollDate = boardEnrollDate;
+	}
+	public String getFilename() {
+		return Filename;
+	}
+	public void setFilename(String filename) {
+		Filename = filename;
+	}
+	public String getFilepath() {
+		return Filepath;
+	}
+	public void setFilepath(String filepath) {
+		Filepath = filepath;
 	}
 	
 	

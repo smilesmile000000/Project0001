@@ -50,8 +50,17 @@ public class MemberDao {
 		return list;
 	}
 
-//	public void test() {
-//		String query = "select count(*) from member";
-//		int count = jdbcTemplate.queryForObject(query, int.class);
-//	}
+	public void test() {
+		String query = "select count(*) from member";
+		int count = jdbcTemplate.queryForObject(query, int.class);
+	}
+
+
+	public List checkId(String id) {
+		String query = "select * from member where member_id=?";
+		Object [] params = {id};
+		List list = jdbcTemplate.query(query,  params, new MemberRowMapper());
+		return list;
+	}
+	
 }
