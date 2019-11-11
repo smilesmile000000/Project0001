@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.kh.bean.test.CollectionMapBean"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="org.kh.test.ano.CandyCruchSaga"/>
@@ -37,7 +36,6 @@
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="org.kh.member.model.vo.Member"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttribute"/>
 <fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="org.kh.board.model.vo.Board"/>
 <fullyQualifiedTypeName name="org.kh.member.common.Message"/>
 <fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
+<fullyQualifiedTypeName name="org.kh.member.model.vo.Member"/>
 </qualifiedTypeNameHistroy>
