@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,6 +27,7 @@ import com.google.gson.Gson;
 
 import net.sf.json.JSONObject;
 
+@CrossOrigin(origins="*")
 @Controller
 public class MemberController {
 	@Autowired
@@ -132,9 +134,7 @@ public class MemberController {
 		return mav;
 	}
 	
-	/*
-
-	@RequestMapping(value="/uploadTest.do")
+	/*@RequestMapping(value="/uploadTest.do")
 	public String uploadTest(HttpServletRequest request, @RequestParam MultipartFile fileTest, @RequestParam String test) {
 		String savePath = request.getSession().getServletContext().getRealPath("/resources/upload/");
 		String originalFileName = fileTest.getOriginalFilename();

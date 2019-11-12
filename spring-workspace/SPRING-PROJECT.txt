@@ -1,0 +1,67 @@
+== member ==
+member_id	회원아이디(이메일)
+member_pw	회원 비밀번호
+member_name	회원 이름
+member_phone	회원 전화번호
+member_com	회원 소속회사
+member_grade	회원 등급(관리자, 제조사, 협력사)
+member_state	회원 가입여부(승인대기, 탈퇴-비활성화)
+member_enroll_date 가입일자
+
+== company ==
+company_no	회사 번호
+company_name	회사 이름
+
+== board ==
+board_no	게시판 번호
+board_com	작성자 소속회사
+board_id	작성자 아이디(이메일)
+board_state	게시글_상태(처리완료, 진행중)
+filename	파일업로드
+filepath	파일업로드
+board_enroll_date 게시글 등록일
+
+== board_comment ==
+board_comment_no	댓글 번호
+board_comment_writer	댓글 작성자
+board_comment_content	댓글 내용
+board_comment_date	댓글 작성일
+
+
+CREATE TABLE MEMBER(
+    MEMBER_NO NUMBER PRIMARY KEY,
+    MEMBER_ID VARCHAR2(20) UNIQUE,
+    MEMBER_PW VARCHAR2(20) NOT NULL,
+    MEMBER_NAME VARCHAR2(20) NOT NULL,
+    MEMBER_PHONE VARCHAR2(11) NOT NULL,
+    MEMBER_COM VARCHAR2(30) NOT NULL,
+    MEMBER_GRADE NUMBER NOT NULL,
+    MEMBER_STATE VARCHAR2(20) NOT NULL,
+    MEMBER_ENROLL_DATE DATE DEFAULT SYSDATE
+);
+
+CREATE TABLE COMPANY(
+    COMPANY_NO NUMBER PRIMARY KEY,
+    COMPANY_NAME VARCHAR2(30) NOT NULL
+);
+
+CREATE TABLE BOARD(
+    BOARD_NO NUMBER PRIMARY KEY,
+    BOARD_COM VARCHAR2(30) NOT NULL,
+    BOARD_ID VARCHAR2(20) NOT NULL,
+    BOARD_STATE VARCHAR2(20) NOT NULL,
+    FILENAME VARCHAR2(100),
+    FILEPATH VARCHAR2(100),
+    BOARD_ENROLL_DATE DATE DEFAULT SYSDATE
+);
+
+CREATE TABLE BOARD_COMMENT(
+    BOARD_COMMENT_NO NUMBER PRIMARY KEY,
+    BOARD_COMMENT_WRITER VARCHAR2(30),
+    BOARD_COMMENT_CONTENT VARCHAR(1000),
+    BOARD_COMMENT_DATE DATE DEFAULT SYSDATE
+);
+
+CREATE SEQUENCE MEMBER_NO_SEQ;
+CREATE SEQUENCE COMPANY_NO_SEQ;
+CREATE SEQUENCE BOARD_NO_SEQ;
