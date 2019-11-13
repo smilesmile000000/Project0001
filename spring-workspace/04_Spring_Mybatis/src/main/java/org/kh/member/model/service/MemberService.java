@@ -2,9 +2,6 @@ package org.kh.member.model.service;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.kh.member.common.Message;
-import org.kh.member.common.SHA256Util;
 import org.kh.member.model.dao.MemberDao;
 import org.kh.member.model.vo.Member;
 import org.springframework.beans.factory.annotation.Autowired;

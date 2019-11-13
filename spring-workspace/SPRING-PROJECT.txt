@@ -1,4 +1,5 @@
 == member ==
+member_no	회원번호
 member_id	회원아이디(이메일)
 member_pw	회원 비밀번호
 member_name	회원 이름

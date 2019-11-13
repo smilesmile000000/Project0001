@@ -5,7 +5,6 @@ import java.util.List;
 import org.kh.member.model.vo.Member;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository("memberDao")

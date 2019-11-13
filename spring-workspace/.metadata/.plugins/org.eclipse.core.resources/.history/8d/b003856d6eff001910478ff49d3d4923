@@ -1,7 +1,0 @@
-package org.kh.spring.model.vo;
-
-public class BeanFactory {
-	public static Object getBean(String beanName) {
-		
-	}
-}
